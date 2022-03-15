@@ -72,7 +72,7 @@ class LibroController extends Controller
      */
     public function show($id)
     {
-        $libro = Libro::findOrFail($id)->first();
+        $libro = Libro::findOrFail($id)->first($id);
         return json_encode($libro);
     }
 
